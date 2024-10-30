@@ -13,7 +13,13 @@ class PersegiPanjang:
             panjang = int(input("masukkan panjang: "))
             lebar = int(input("masukkan lebar: "))
             pp = PersegiPanjang(panjang, lebar)
-            print(pp)
+            pilihan = input("apakah anda ingin menghitung 'keliling' atau 'luas'").strip().lower()
+            if pilihan == "keliling":
+                print(f"keliling dengan panjang ({pp.panjang}) dan lebar ({pp.lebar} adalah ({pp.keliling()})")
+            elif pilihan == "luas":
+                print(f"luas dengan panjang ({pp.panjang}) dan lebar ({pp.lebar}) adalah ({pp.luas()})")
+            else:
+                print("masukkan pilihan yang benar")
         except ValueError:
             print("masukkan angka")
 
